@@ -21,29 +21,51 @@
     </div>
 </div>
 
-<div class="container">
+<div class="container" style="height: 100vh;">
     <div class="row">
         <div class="col-md-12">
             <h1 th:text="${product.courseName}">Spring Framework - Course Name</h1>
         </div>
     </div>
-    <div class="row">
+    <div class="row course-listing">
         <div class="col-md-6">
-            <img src="../static/images/SpringIntroThumb.png"
-                 th:src="@{/images/SpringIntroThumb.png}"
-                 class="center-block"/>
+            <div class="row">
+                <div class="col-md-12">
+                    <img src="../static/images/SpringIntroThumb.png"
+                         th:src="@{'/images/' + ${product.imageUrl}}"
+                         class="center-block"/>
+                </div>
+            </div>
+            <div class="row course-listing-extra-info col-xs-12">
+                <div class="col-xs-8">
+                    <img align="left" alt="John Thompson"
+                         src="../static/images/instructor_jt.jpg"
+                         th:src="@{'/images/' + ${product.author.image}}"
+                         class="img-circle"/>
+                    <div class="small course-author-name"
+                         th:text="${(product.author.firstName) + ' ' + (product.author.lastName)}">
+                        Author Full Name
+                    </div>
+                </div>
+                <div class="col-xs-4">
+                    <div class="small course-price" th:text="${product.price > 0 ? '$ ' + product.price : 'FREE'}">
+                        $ 100
+                    </div>
+                </div>
+            </div>
         </div>
+
         <div class="col-md-6">
             <div>
                 <h2 th:text="${product.courseSubtitle}">Course Title</h2>
-                <p th:text="${product.courseDescription}">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad autem commodi corporis dicta doloremque,
-                    dolores hic id non quam ratione rem soluta? Accusamus aperiam assumenda, atque beatae blanditiis
-                    delectus dignissimos ea earum eos ex facere facilis natus nemo, nihil nobis nostrum odio officia
-                    porro provident quisquam quos recusandae sapiente suscipit tempora tempore ut veritatis voluptatum!
-                    Esse nemo nisi quisquam! Commodi consequatur dolorem quod? Ad amet, assumenda corporis cupiditate
-                    dicta dolore eos et excepturi explicabo fuga ipsam laboriosam libero pariatur quaerat quasi quidem
-                    quod ratione reprehenderit sit tempora veniam vitae, voluptatem voluptatibus. Ab accusamus
-                    consectetur ea hic, itaque magni repellendus similique.</p>
+                <p th:text="${product.courseDescription}">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad
+                    animi architecto autem consequatur culpa deleniti dolores earum eius harum iure, minima, nobis
+                    numquam placeat porro quo ratione saepe sit suscipit! Ad, aperiam at dolor ea eius, eos esse et eum
+                    hic id ipsum molestias nulla quasi quisquam tempora temporibus vero vitae. Accusamus, alias debitis
+                    ea natus necessitatibus nostrum odio pariatur praesentium quam repudiandae. Accusamus adipisci
+                    architecto aut corporis cumque, dignissimos distinctio dolore dolores error est facere harum id
+                    illum itaque laboriosam maiores modi molestiae natus non officiis pariatur perspiciatis, porro
+                    possimus quae quidem quisquam ratione reiciendis, repellendus sequi tenetur vel.</p>
             </div>
         </div>
     </div>

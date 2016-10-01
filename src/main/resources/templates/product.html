@@ -24,19 +24,19 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <h1>Spring Framework - Course Name</h1>
+            <h1 th:text="${product.courseName}">Spring Framework - Course Name</h1>
         </div>
     </div>
     <div class="row">
         <div class="col-md-6">
             <img src="../static/images/SpringIntroThumb.png"
-                 th:src="@{images/SpringIntroThumb.png}"
+                 th:src="@{/images/SpringIntroThumb.png}"
                  class="center-block"/>
         </div>
         <div class="col-md-6">
             <div>
-                <h2>Course Title</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad autem commodi corporis dicta doloremque,
+                <h2 th:text="${product.courseSubtitle}">Course Title</h2>
+                <p th:text="${product.courseDescription}">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad autem commodi corporis dicta doloremque,
                     dolores hic id non quam ratione rem soluta? Accusamus aperiam assumenda, atque beatae blanditiis
                     delectus dignissimos ea earum eos ex facere facilis natus nemo, nihil nobis nostrum odio officia
                     porro provident quisquam quos recusandae sapiente suscipit tempora tempore ut veritatis voluptatum!

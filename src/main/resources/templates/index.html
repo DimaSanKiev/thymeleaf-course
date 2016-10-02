@@ -28,7 +28,18 @@
         </div>
     </div>
 
-    <div class="row course-list list">
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+        </tr>
+        <tr th:each="product : ${products}">
+            <td th:text="${product.id}"></td>
+            <td th:text="${product.courseName}"></td>
+        </tr>
+    </table>
+
+    <div class="row course-list list" th:remove="all">
         <div class="col-md-4">
             <div class="course-listing">
                 <div class="row">
@@ -145,7 +156,7 @@
         </div>
     </div>
 
-    <div class="row">
+    <div class="row" th:remove="all">
         <div class="col-md-4">
             <div class="course-listing">
                 <div class="row">

@@ -23,6 +23,6 @@ public class LoginController {
         if (bindingResult.hasErrors()) {
             return "loginform";
         }
-        return "redirect:index";
+        return "redirect:/";
     }
 }

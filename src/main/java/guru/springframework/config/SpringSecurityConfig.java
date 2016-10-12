@@ -22,7 +22,7 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests().antMatchers("/", "/index/**", "/product/**", "/checkout", "/docheckout").permitAll()
                 .and().authorizeRequests().antMatchers("/login", "logout").permitAll()
-                .and().authorizeRequests().antMatchers("/static/**", "/**/favicon.ico").permitAll()
+                .and().authorizeRequests().antMatchers("/static/css/**","/js/**", "/images/**", "/**/favicon.ico").permitAll()
                 .and().formLogin().loginPage("/login").defaultSuccessUrl("/").permitAll()
                 .and().logout()
                         .deleteCookies("remove")

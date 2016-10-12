@@ -6,7 +6,7 @@
     <groupId>guru.springframework</groupId>
     <artifactId>thymeleaf-course</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <packaging>jar</packaging>
+    <packaging>war</packaging>
 
     <name>thymeleaf-course</name>
     <description>Thymeleaf Course</description>
